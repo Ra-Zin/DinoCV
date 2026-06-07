@@ -3,9 +3,9 @@ import random
 import cv2
 import os
 
-import src.vision.camera as camera
-import src.vision.body_tracking as body_tracking
-import src.game.player as player
+import vision.camera as camera
+import vision.body_tracking as body_tracking
+import game.player as player
 
 # ==========================================
 # SETTINGS
@@ -59,7 +59,7 @@ def trim_image(img):
 # Cacti (trimmed so no floating gaps)
 cactus_images = []
 for i in range(1, 7):
-    path = f"assets/cacti/cactus{i}.png"
+    path = f"../assets/cacti/cactus{i}.png"
     if os.path.exists(path):
         raw = pygame.image.load(path).convert_alpha()
         trimmed = trim_image(raw)
@@ -68,14 +68,14 @@ for i in range(1, 7):
 # Birds
 bird_images = []
 for name in ["Ptero1.png", "Ptero2.png"]:
-    path = f"assets/{name}"
+    path = f"../assets/{name}"
     if os.path.exists(path):
         bird_images.append(scale_img(pygame.image.load(path).convert_alpha()))
 
 # Cloud
 cloud_img = None
-if os.path.exists("assets/cloud.png"):
-    cloud_img = scale_img(pygame.image.load("assets/cloud.png").convert_alpha())
+if os.path.exists("./assets/cloud.png"):
+    cloud_img = scale_img(pygame.image.load("../assets/cloud.png").convert_alpha())
 
 # Sounds
 jump_sound = None
@@ -83,15 +83,15 @@ score_sound = None
 die_sound = None
 
 try:
-    jump_sound = pygame.mixer.Sound("assets/sfx/jump.mp3")
+    jump_sound = pygame.mixer.Sound("../assets/sfx/jump.mp3")
 except:
     pass
 try:
-    score_sound = pygame.mixer.Sound("assets/sfx/100points.mp3")
+    score_sound = pygame.mixer.Sound("../assets/sfx/100points.mp3")
 except:
     pass
 try:
-    die_sound = pygame.mixer.Sound("assets/sfx/loose.mp3")
+    die_sound = pygame.mixer.Sound("../assets/sfx/loose.mp3")
 except:
     pass
 

@@ -3,9 +3,9 @@ import random
 import cv2
 import os
 
-import camera
-import body_tracking
-import player
+import src.vision.camera as camera
+import src.vision.body_tracking as body_tracking
+import src.game.player as player
 
 # ==========================================
 # SETTINGS

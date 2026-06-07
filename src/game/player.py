@@ -29,11 +29,11 @@ def scale_img(img):
 
 def load_dino_assets():
     global img_run, img_jump, img_duck
-    img_run[0] = scale_img(pygame.image.load("assets/Dino1.png").convert_alpha())
-    img_run[1] = scale_img(pygame.image.load("assets/Dino2.png").convert_alpha())
-    img_jump = scale_img(pygame.image.load("assets/DinoJumping.png").convert_alpha())
-    img_duck[0] = scale_img(pygame.image.load("assets/DinoDucking1.png").convert_alpha())
-    img_duck[1] = scale_img(pygame.image.load("assets/DinoDucking2.png").convert_alpha())
+    img_run[0] = scale_img(pygame.image.load("../assets/Dino1.png").convert_alpha())
+    img_run[1] = scale_img(pygame.image.load("../assets/Dino2.png").convert_alpha())
+    img_jump = scale_img(pygame.image.load("../assets/DinoJumping.png").convert_alpha())
+    img_duck[0] = scale_img(pygame.image.load("../assets/DinoDucking1.png").convert_alpha())
+    img_duck[1] = scale_img(pygame.image.load("../assets/DinoDucking2.png").convert_alpha())
 
 def init_dino(x, ground_y):
     global dino_x, dino_y, dino_vel_y, dino_is_jumping, dino_ground_y
